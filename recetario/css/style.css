@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(245, 236, 224);
+}
+
+body.dark {
+  background-color: #343D5B;
+  color: white;
+  transition: .5s ease all;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/img/fondo-cocina.jpg);
+  background-size: cover;
+}
+
+header img {
+  width: 15%;
+  align-self: baseline;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.paginaRecetario header a {
+  position: relative;
+  bottom: -100px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+header i {
+  font-size: 4em;
+  color: white;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 3.5em;
+  font-family: "Poppins", sans-serif;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 20px 30px;
+}
+
+h2 {
+  text-align: center;
+  margin: 70px;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+
+hr {
+  width: 80vw;
+  margin: 50px auto;
+}
+
+.comparador h2 {
+  margin: 10px 0 60px 0;
+}
+
+body.dark h2,
+body.dark h3 {
+  color: #f37ef3;
+}
+
+.ideasRecetasTitulo {
+  margin-bottom: 50px;
+}
+
+span {
+  color: #800080;
+  font-weight: bold;
+  font-style: italic;
+}
+
+body.dark span {
+  color: rgb(243, 126, 243);
+}
+
+i {
+  color: purple;
+}
+
+body.dark main i {
+  color: rgb(243, 126, 243);
+}
+
+td {
+  border: 1px solid purple;
+}
+
+body.dark td {
+  border: 1px solid rgb(243, 126, 243);
+}
+
+tbody i:hover,
+header i:hover {
+  color: #c948c9;
+  transition: 0.5s;
+  transform: scale(1.5);
+  box-shadow: 11px 10px 26px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+main p {
+  width: 70%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+form,
+.comparador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+input,
+select {
+  padding-left: 4px;
+  width: 30%;
+  margin: 10px 0;
+}
+
+input[type="submit"],
+.borrarTodo,
+.compare,
+#formularioAcceso button,
+#formularioRegistro button {
+  display: block;
+  margin: 20px auto;
+  font-size: 15px;
+  width: 200px;
+  height: 50px;
+  border-width: 1px;
+  border-color: #a511c0;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: inset 0px 1px 0px 0px #e184f3;
+  text-shadow: inset 0px 1px 0px #9b14b3;
+  background: linear-gradient(#c123de, #a20dbd);
+}
+
+input[type="submit"]:hover,
+.borrarTodo:hover,
+.compare:hover {
+  background: linear-gradient(#a20dbd, #c123de);
+  cursor: pointer;
+}
+
+input[type="submit"]:active,
+.borrarTodo:active,
+.compare:active {
+  background: #a20dbd;
+}
+
+.creadorCantidadRecetas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.areaIngrediente {
+  margin: 10px auto;
+  display: block;
+}
+
+table {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 2px solid purple;
+  border-spacing: 0;
+}
+
+body.dark table {
+  border: 2px solid rgb(243, 126, 243);
+}
+
+thead {
+  background-color: purple;
+  color: white;
+}
+
+body.dark thead {
+  background-color: rgb(243, 126, 243);
+  color: black;
+}
+
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  padding: 10px;
+}
+
+td:first-child {
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.contenedorBotones {
+  display: flex;
+}
+
+.legend {
+  color: purple;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+body.dark .legend {
+  color: rgb(243, 126, 243);
+}
+
+.filterConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comidasVegetarianas,
+.comidasRapidas {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  margin: 30px;
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2rem;
+  background-image: url(../assets/icons/cookie-bite-solid.svg);
+  background-position: 0 0;
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+}
+
+ul li.noIcon {
+  background-image: none;
+}
+
+
+/* Botón de modo claro/oscuro */
+
+.switch {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  transition: .5s ease all;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active {
+  background: orange;
+  color: black;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.switch span i {
+  color: white;
+}
+
+/* Pages de loguin y creación cuenta */
+
+.index form,
+.createAccount form {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  width: 30%;
+  min-width: 250px;
+  height: 60vh;
+  border-radius: 20px;
+
+}
+
+.index input,
+.createAccount input {
+  width: 200px;
+}
+
+.index a,
+.createAccount a {
+  color: rgb(243, 126, 243);
+  margin-top: 30px;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.index a:hover,
+.createAccount a:hover {
+  font-style: italic;
+  transform: scale(1.1);
+}
+
+#formularioAcceso button,
+#formularioRegistro button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+/* Cerrar Sesión */
+
+.paginaRecetario header .cerrarSesion {
+  position: absolute;
+  color: purple;
+  top: 10px;
+  right: 10px;
+  bottom: initial;
+  text-decoration: none;
+  background-color: #F5ECE0;
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.paginaRecetario header .cerrarSesion:hover {
+  color: rgb(243, 126, 243);
+  border: 1px solid rgb(243, 126, 243);
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+/* Sección de busqueda por API */
+
+#buscaApi{
+  flex-direction: row;
+}
+
+
+
+#search-btn {
+  padding: 5px;
+}
+
+.resultadoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40vh;
+  justify-content: space-evenly
+}
+
+.itemReceta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.7);
+  margin: 1.5rem 1rem;
+  width: 30%;
+  min-width: 300px;
+  height: 800px;
+  transition: .5s;
+}
+
+.itemReceta img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.itemReceta p {
+  padding: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+
+}
+
+.itemReceta p::-webkit-scrollbar {
+  display: none;
+}
+
+.itemReceta h3,
+.itemReceta h4 {
+  margin: 20px;
+}
+
+.itemReceta:hover {
+  transform: scale(1.1);
+}
+
+.recetaApi {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.buscadorRecetas {
+  width: 300px;
+  height: 40px;
+  font-size: 1.6rem;
+}
+
+
+
+.fa-search {
+  font-size: 1.6rem;
+}
